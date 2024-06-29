@@ -1,0 +1,63 @@
+.productCardContainer{
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 8px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.productCardHeader{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productCardSale{
+  color: red;
+  font-family: Harrington;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.productCardCartContainer{
+  display: flex;
+  gap: 4px;
+}
+
+.productCardImgContainer{
+  display: flex;
+  justify-content: center;
+}
+
+.productCardInfoContainer > h4{
+  width: 140px;
+  text-wrap: wrap;
+  overflow: hidden;
+}
+
+.productCardCartInteractionContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.productCardCartInteractionContainer > input{
+  width: 32px;
+  padding: 4px;
+  text-align: center;
+  outline: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.productCardCartInteractionButton{
+  cursor: pointer;
+}
