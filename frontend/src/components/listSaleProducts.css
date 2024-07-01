@@ -1,0 +1,12 @@
+.listSaleProductsContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.slider{
+  width: 90%;
+  max-width: 2000px;
+  padding: 40px 180px 40px 60px;
+}
