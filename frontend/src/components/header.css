@@ -1,3 +1,9 @@
+.headerSticky{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
 .headerContainer{
   position: relative;
   display: flex;
@@ -19,16 +25,41 @@
   cursor: pointer;
 }
 
-.loggedUser{
+.profileName{
   position: absolute;
   bottom: 4px;
   right: 20px;
   width: 200px;
-  color: #949494;
+  color: #828282;
   font-size: 1rem;
   text-align: right;
   text-wrap: nowrap;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.profileCartContainer{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.profileCart{
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px 8px 40px;
+  color: black;
+  background-color: #dbd7fc;
+  border: 1px solid black;
+  border-top: 0px;
+  border-bottom-left-radius: 28px;
+  cursor: pointer;
+}
+
+.profileCart:hover{
+  color: blue;
 }

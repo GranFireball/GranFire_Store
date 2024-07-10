@@ -1,0 +1,78 @@
+.cartContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cartProductsContainer{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.cartTitleContainer{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cartTitle{
+  text-align: center;
+}
+
+.clearCartButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.clearCartButton:hover{
+  color: red;
+}
+
+.gridCartProducts{
+  width: 90%;
+  display: grid;
+  align-content: center;
+	grid-template-columns: repeat(auto-fit, minmax(160px, auto));
+  column-gap: 20px;
+  row-gap: 20px;
+  padding: 40px 60px;
+  margin-bottom: 120px;
+}
+
+.totalPriceCartContainer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 20px;
+  background-color: #dbd7fc;
+  border-top: 1px solid black;
+}
+
+.totalPriceCartContainer > p{
+  font-size: 1.5rem;
+}
+
+.totalPriceCartContainer > button{
+  padding: 16px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.totalPriceCartContainer > button:hover{
+  color: blue;
+}

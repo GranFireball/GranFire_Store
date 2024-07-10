@@ -5,6 +5,12 @@
   margin-top: 40px;
 }
 
+.listSaleProductsContainer > h2{
+  width: 90%;
+  max-width: 2000px;
+  padding: 0px 20px;
+}
+
 .slider{
   width: 90%;
   max-width: 2000px;
