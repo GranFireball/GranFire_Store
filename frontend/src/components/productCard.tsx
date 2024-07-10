@@ -6,9 +6,10 @@ import { TProduct } from "../types";
 
 interface IProductCard{
   product: TProduct;
+  cart?: boolean;
 }
 
-export default function ProductCard({product}: IProductCard){
+export default function ProductCard({product, cart}: IProductCard){
   const CartIconSize = 28;
   return(
     <article className="productCardContainer">
@@ -38,6 +39,10 @@ export default function ProductCard({product}: IProductCard){
             </Fragment>
           :
             <p>R$ {product.price}</p>
+        }
+        {
+          cart &&
+          <p>Total: R$ 20,00</p>
         }
       </div>
       <div className="productCardCartInteractionContainer">
