@@ -1,61 +1,59 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-
 import ProductCard from "./productCard";
 import "./listSaleProducts.css";
 
+const products = [
+  {name: "Produto 1", price: "25,40", sale: "70,5"},
+  {name: "Produto 1", price: "25,40", sale: "70,5"},
+  {name: "Produto 1", price: "25,40"},
+  {name: "Produto 1", price: "25,40"},
+  {name: "Produto 1", price: "25,40"},
+  {name: "Produto 1", price: "25,40"},
+  {name: "Produto 1", price: "25,40"},
+  {name: "Produto 1", price: "25,40", sale: "70,5"},
+  {name: "Produto 1", price: "25,40", sale: "70,5"},
+  {name: "Produto 1", price: "25,40", sale: "70,5"},
+  {name: "Produto 1", price: "25,40", sale: "70,5"},
+  {name: "Produto 1", price: "25,40", sale: "70,5"},
+  {name: "Produto 1", price: "25,40", sale: "70,5"},
+  {name: "Produto 1", price: "25,40", sale: "70,5"},
+  {name: "Produto 1", price: "25,40", sale: "70,5"},
+  {name: "Produto 1", price: "25,40", sale: "70,5"},
+];
+
 export default function ListSaleProducts(){
-  const products = [
-    {name: "Produto 1", price: "25,40"},
-    {name: "Produto 1", price: "25,40"},
-    {name: "Produto 1", price: "25,40"},
-    {name: "Produto 1", price: "25,40"},
-    {name: "Produto 1", price: "25,40"},
-    {name: "Produto 1", price: "25,40"},
-    {name: "Produto 1", price: "25,40"},
-    {name: "Produto 1", price: "25,40"},
-    {name: "Produto 1", price: "25,40"},
-    {name: "Produto 1", price: "25,40"},
-    {name: "Produto 1", price: "25,40"},
-    {name: "Produto 1", price: "25,40"},
-    {name: "Produto 1", price: "25,40"},
-    {name: "Produto 1", price: "25,40"},
-    {name: "Produto 1", price: "25,40"},
-    {name: "Produto 1", price: "25,40"},
-  ];
+
 
   return(
     <section className="listSaleProductsContainer">
-      <h2 className="listSaleProductsTitle">PROMOÇÕES</h2>
+      <h2>PROMOÇÕES</h2>
       <Swiper breakpoints={{
         0: {
           slidesPerView: 1
         },
-        360: {
+        340: {
           slidesPerView: 2
         },
-        560: {
+        660: {
           slidesPerView: 3
         },
-        760: {
+        960: {
           slidesPerView: 4
         },
-        960: {
+        1240: {
           slidesPerView: 5
         },
-        1160: {
+        1500: {
           slidesPerView: 6
-        },
-        1360: {
-          slidesPerView: 7
         }
       }}
       modules={[Navigation, Pagination]}
-      spaceBetween={200}
+      spaceBetween={160}
       navigation
       pagination={{ clickable: true }}
       className="slider"
@@ -63,15 +61,14 @@ export default function ListSaleProducts(){
         {
           products.map((product, index) => {
             return(
+              product.sale &&
               <SwiperSlide key={index} >
                 <ProductCard product={product}/>
               </SwiperSlide>
             )
           })
         }
-
       </Swiper>
-      
     </section>
   )
 }
