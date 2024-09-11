@@ -1,0 +1,50 @@
+.stockContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stockProductsContainer{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.stockTitleContainer{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stockTitle{
+  text-align: center;
+}
+
+.addProductButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: #dbd7fc;
+  cursor: pointer;
+}
+
+.addProductButton:hover{
+  color: blue;
+}
+
+.gridStockProducts{
+  width: 90%;
+  display: grid;
+  align-content: center;
+	grid-template-columns: repeat(auto-fit, minmax(160px, 200px));
+  row-gap: 20px;
+  padding: 40px 0px 40px 60px;
+  margin-bottom: 120px;
+}

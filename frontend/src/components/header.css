@@ -16,6 +16,7 @@
 
 .imgLogo{
   width: 80px;
+  cursor: pointer;
 }
 
 .loginAndLogoutButton{
