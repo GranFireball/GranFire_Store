@@ -7,7 +7,7 @@ import uuid
 
 import stripe
 
-stripe.api_key = "sk_test_51PfiirRpgD1LR0XJz1QUoHX5LsEPEvbbvdxZkWjjo6Dc8nIrQm2nfVA6Icn9W2TzbNN73XeO2Z5ljJFBHdP3TcHS005HLm7qq6"
+stripe.api_key = process.env.STRIPE_API_KEY
 
 
 app = Flask(__name__)
@@ -59,7 +59,7 @@ product_schema = ProductSchema()
 products_schema = ProductSchema(many=True)
 
 
-app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://root:root@localhost/granfirestore"
+app.config["SQLALCHEMY_DATABASE_URI"] = process.env.DATABASE_URL
 db.init_app(app)
 with app.app_context():
   db.create_all()
